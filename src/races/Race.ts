@@ -1,7 +1,9 @@
-export class Race{
-    readonly name: string
+export class Race {
+  readonly name: string;
+  readonly randomCityNames: Array<string>;
 
-    constructor(name:string){
-        this.name=name
-    }
+  constructor(name: string, randomCityNames: Array<string>) {
+    this.name = name;
+    this.randomCityNames = randomCityNames;
+  }
 }
