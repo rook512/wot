@@ -1,0 +1,1 @@
+export const humanCityNames = ["Highwater", "Liverpool", "Riverford"]

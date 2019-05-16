@@ -1,3 +1,4 @@
 import { Race } from "./Race";
+import { humanCityNames } from "./humanCityNames";
 
-export const human = new Race("Human", ["Highwater", "Liverpool", "Riverford"]);
+export const human = new Race("Human", humanCityNames);
