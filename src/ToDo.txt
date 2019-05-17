@@ -10,7 +10,7 @@ Cities
     Add population to a city
 
 Races
-    - Add more Races
+    - Add more Races - DONE
     - Design race core concepts
 
 Units
@@ -21,7 +21,7 @@ Units
 
 Map
     - Design terrain/map features
-    Create terrain types
+    Create terrain types - DONE
     Create map generation
     Place something on map
     Draw map
