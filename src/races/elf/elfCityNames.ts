@@ -1,0 +1,1 @@
+export const elfCityNames = ["Proudgarden", "Evergreen", "Meadowlark"]

@@ -1,0 +1,1 @@
+export const orcCityNames = ["Sawtooth", "Broken Jaw", "Thumbsplitter"]

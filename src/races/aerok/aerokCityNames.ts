@@ -1,0 +1,1 @@
+export const aerokCityNames = ["Cragspire", "Cloudhome", "Zephyr"]

@@ -1,0 +1,33 @@
+To Do
+
+Cities
+    - Add more city names
+    - Design basic city concepts
+    Add city map coordinates
+    Display city on map
+    - Design city buildings
+    Add building to a city
+    Add population to a city
+
+Races
+    - Add more Races
+    - Design race core concepts
+
+Units
+    - Design unit core concepts
+    Create a unit
+    Display unit on map
+    Move unit around map
+
+Map
+    - Design terrain/map features
+    Create terrain types
+    Create map generation
+    Place something on map
+    Draw map
+    Navigate map
+
+Combat
+    - Design combat core concepts
+    Simulate combat between two units
+    Stage combat between two units on a map (unit A engages unit B)
