@@ -10,7 +10,8 @@ Cities
     Add population to a city
 
 Races
-    - Add more Races - DONE
+    - Add more Races - ALWAYS
+    - Add more Race City Names
     - Design race core concepts
 
 Units
