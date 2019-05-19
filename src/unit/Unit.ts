@@ -1,10 +1,15 @@
-import { Race } from "../races/Race";
 import { DamageType } from "./damageType/DamageType";
 import { UnitProperty } from "./unitProperty/UnitProperty";
+import { Race } from "../races/Race";
+import { Building } from "../buildings/Building";
 
 export class Unit {
   readonly name: string;
-  readonly race: Race;
+  readonly requires: Array<Building | Race>;
+  readonly upkeepFood: number;
+  readonly upkeepMoney: number;
+  readonly upkeepMagic: number;
+  readonly upkeepHoly: number;
   readonly movement: number;
   readonly count: number;
   readonly health: number;
@@ -17,7 +22,11 @@ export class Unit {
   readonly unitProperty: Array<UnitProperty>;
   constructor(
     name: string,
-    race: Race,
+    requires: Array<Building | Race>,
+    upkeepFood: number,
+    upkeepMoney: number,
+    upkeepMagic: number,
+    upkeepHoly: number,
     movement: number,
     count: number,
     health: number,
@@ -30,7 +39,11 @@ export class Unit {
     unitProperty: Array<UnitProperty>
   ) {
     this.name = name;
-    this.race = race;
+    this.requires = requires
+    this.upkeepFood = upkeepFood;
+    this.upkeepMoney = upkeepMoney;
+    this.upkeepMagic = upkeepMagic;
+    this.upkeepHoly = upkeepHoly;
     this.movement = movement;
     this.count = count;
     this.health = health;
