@@ -1,31 +1,20 @@
 import { Race } from "../races/Race";
+import { BuildingResource } from "./BuildingResource";
 
 export class Building {
-  name: string;
-  requires: Array<Building | Race>;
-  costProd: number;
-  costMagic: number;
-  costHoly: number;
-  upkeepProd: number;
-  upkeepMagic: number;
-  upkeepHoly: number;
+  readonly name: string;
+  readonly requires: Array<Building | Race>;
+  readonly cost: Record<BuildingResource, number>;
+  readonly upkeep: Record<BuildingResource, number>;
   constructor(
     name: string,
     requires: Array<Building | Race>,
-    costProd: number,
-    costMagic: number,
-    costHoly: number,
-    upkeepProd: number,
-    upkeepMagic: number,
-    upkeepHoly: number
+    cost: Record<BuildingResource, number>,
+    upkeep: Record<BuildingResource, number>
   ) {
     this.name = name;
     this.requires = requires;
-    this.costProd = costProd;
-    this.costMagic = costMagic;
-    this.costHoly = costHoly;
-    this.upkeepProd = upkeepProd;
-    this.upkeepMagic = upkeepMagic;
-    this.upkeepHoly = upkeepHoly;
+    this.cost = cost;
+    this.upkeep = upkeep;
   }
 }

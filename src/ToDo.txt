@@ -8,6 +8,9 @@ Cities
     - Design city buildings
     Add building to a city
     Add population to a city
+    Requirement specification
+    Cost/Resource enum
+    Building builder
 
 Races
     - Add more Races - ALWAYS
@@ -19,6 +22,9 @@ Units
     Create a unit
     Display unit on map
     Move unit around map
+    Requirement specification
+    Unit features
+    Make that stuff easier to read (Unit builder)
 
 Map
     - Design terrain/map features
@@ -27,6 +33,7 @@ Map
     Place something on map
     Draw map
     Navigate map
+    Fix object naming
 
 Combat
     - Design combat core concepts

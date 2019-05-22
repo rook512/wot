@@ -2,17 +2,17 @@ import { DamageType } from "./damageType/DamageType";
 import { UnitProperty } from "./unitProperty/UnitProperty";
 import { Race } from "../races/Race";
 import { Building } from "../buildings/Building";
+import { UnitResource } from "./UnitResource";
+import { BuildingResource } from "../buildings/BuildingResource";
 
 export class Unit {
   readonly name: string;
   readonly requires: Array<Building | Race>;
-  readonly upkeepFood: number;
-  readonly upkeepMoney: number;
-  readonly upkeepMagic: number;
-  readonly upkeepHoly: number;
+  readonly cost: Record<BuildingResource, number>;
+  readonly upkeep: Record<UnitResource, number>;
   readonly movement: number;
   readonly count: number;
-  readonly health: number;
+  readonly maxHealth: number;
   readonly toHit: number;
   readonly damage: number;
   readonly damageType: Array<DamageType>;
@@ -23,13 +23,11 @@ export class Unit {
   constructor(
     name: string,
     requires: Array<Building | Race>,
-    upkeepFood: number,
-    upkeepMoney: number,
-    upkeepMagic: number,
-    upkeepHoly: number,
+    cost: Record<BuildingResource, number>,
+    upkeep: Record<UnitResource, number>,
     movement: number,
     count: number,
-    health: number,
+    maxHealth: number,
     toHit: number,
     damage: number,
     damageType: Array<DamageType>,
@@ -39,14 +37,12 @@ export class Unit {
     unitProperty: Array<UnitProperty>
   ) {
     this.name = name;
-    this.requires = requires
-    this.upkeepFood = upkeepFood;
-    this.upkeepMoney = upkeepMoney;
-    this.upkeepMagic = upkeepMagic;
-    this.upkeepHoly = upkeepHoly;
+    this.requires = requires;
+    this.cost = cost;
+    this.upkeep = upkeep;
     this.movement = movement;
     this.count = count;
-    this.health = health;
+    this.maxHealth = maxHealth;
     this.toHit = toHit;
     this.damage = damage;
     this.damageType = damageType;
