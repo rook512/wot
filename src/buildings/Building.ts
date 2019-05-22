@@ -1,6 +1,5 @@
 import { Race } from "../races/Race";
 import { BuildingResource } from "./BuildingResource";
-
 export class Building {
   readonly name: string;
   readonly requires: Array<Building | Race>;

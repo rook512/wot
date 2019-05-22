@@ -2,18 +2,13 @@ import { DamageType } from "./damageType/DamageType";
 import { UnitProperty } from "./unitProperty/UnitProperty";
 import { Unit } from "./Unit";
 import { Race } from "../races/Race";
-import { Building } from "../buildings/Building";
+import { BuildingBuilder } from "../buildings/BuildingBuilder";
 
 it("creates a new unit without crashing", () => {
   const damageType = new DamageType("Damage Type");
   const unitProperty = new UnitProperty("Unit Property");
   const race = new Race("Race", ["City Name"]);
-  const building = new Building(
-    "Building",
-    [race],
-    { Production: 100, Magic: 0, Holy: 0 },
-    { Production: 0, Magic: 0, Holy: 0 }
-  );
+  const building = new BuildingBuilder(true).build();
   const unit = new Unit(
     "Anything",
     [race, building],
