@@ -29,6 +29,10 @@ export class BuildingBuilder {
     this.cost = { ...this.cost, ...newCost };
     return this;
   }
+  setUpkeep(newUpkeep: Partial<Record<BuildingResource, number>>) {
+    this.upkeep = { ...this.upkeep, ...newUpkeep };
+    return this;
+  }
 
   build(): Building {
     if (!this.wasNameSet) {

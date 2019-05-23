@@ -32,3 +32,16 @@ it("allows us to easily set multiple building costs", () => {
   expect(actual.cost.Production).toEqual(100);
   expect(actual.cost.Holy).toEqual(50);
 });
+
+it("allows us to easily set the upkeep", () => {
+  const actual = new BuildingBuilder(true).setUpkeep({ Production: 1 }).build();
+  expect(actual.upkeep.Production).toEqual(1);
+});
+
+it("allows us to easily set multiple upkeeps", () => {
+  const actual = new BuildingBuilder(true)
+    .setUpkeep({ Magic: 1, Holy: 1 })
+    .build();
+  expect(actual.upkeep.Magic).toEqual(1);
+  expect(actual.upkeep.Holy).toEqual(1);
+});

@@ -1,5 +1,11 @@
 To Do
 
+Ensure Game is awesome in all ways important to 4X
+Explore
+Expand
+Exploit
+Exterminate
+
 Cities
     - Add more city names
     - Design basic city concepts
@@ -39,3 +45,4 @@ Combat
     - Design combat core concepts
     Simulate combat between two units
     Stage combat between two units on a map (unit A engages unit B)
+
