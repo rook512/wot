@@ -17,6 +17,7 @@ Cities
     Requirement specification
     Cost/Resource enum
     Building builder
+    Building Viewer (for debuggin)
 
 Races
     - Add more Races - ALWAYS
@@ -31,6 +32,7 @@ Units
     Requirement specification
     Unit features
     Make that stuff easier to read (Unit builder)
+    Unit Viewer (for debugging)
 
 Map
     - Design terrain/map features
