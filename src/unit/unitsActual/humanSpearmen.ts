@@ -5,7 +5,7 @@ import { piercing } from "../damageType/damageTypesActual/piercing";
 export const humanSpearmen = new UnitBuilder()
   .setName("Human Spearmen")
   .setRequires([human])
-  .setCosts({ Production: 30 })
+  .setCosts({ Production: 30, Magic: 40 })
   .setUpkeep({ Food: 1 })
   .setMovement(1)
   .setCount(6)
