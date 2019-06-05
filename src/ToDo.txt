@@ -14,10 +14,10 @@ Cities
 
     Add building to a city
     Add population to a city
-    Requirement specification
+    Requirement specification (special requirements)
 
 
-    Building Viewer (for debuggin)
+    Building Viewer (for debuggin) <- F This
 
 Races
 
@@ -26,10 +26,10 @@ Units
 
     Display unit on map
     Move unit around map
-    Requirement specification
-    Unit features
-    Make that stuff easier to read (Unit builder)
-    Unit Viewer (for debugging)
+    Requirement specification (special requirements)
+    Unit features (properties)
+
+
     Unit templates
 
 Map
