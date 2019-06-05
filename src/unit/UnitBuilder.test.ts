@@ -6,8 +6,11 @@ const dtype = new DamageType("Damage Type");
 const uprop = new UnitProperty("Unit Property");
 
 it("creates a new unit without crashing", () => {
+  // Arrange
   const target = new UnitBuilder(true);
+  // Act
   const actual = target.build();
+  // Assert
   expect(actual).toBeDefined();
 });
 
