@@ -23,6 +23,10 @@ export class UnitBuilder {
   toHit: number = 0;
   damage: number = 0;
   damageType: Array<DamageType> = [];
+  rangedToHit: number = 0;
+  rangedDamage: number = 0;
+  rangedDamageType: Array<DamageType> = [];
+  ammo: number = 0;
   defense: number = 0;
   armor: number = 0;
   resistance: number = 0;
@@ -73,6 +77,22 @@ export class UnitBuilder {
     this.damageType = damageType;
     return this;
   }
+  setRangedToHit(rangedToHit: number) {
+    this.rangedToHit = rangedToHit;
+    return this;
+  }
+  setRangedDamage(rangedDamage: number) {
+    this.rangedDamage = rangedDamage;
+    return this;
+  }
+  setRangedDamageType(rangedDamageType: Array<DamageType>) {
+    this.rangedDamageType = rangedDamageType;
+    return this;
+  }
+  setAmmo(ammo: number) {
+    this.ammo = ammo;
+    return this;
+  }
   setDefense(defense: number) {
     this.defense = defense;
     return this;
@@ -105,6 +125,10 @@ export class UnitBuilder {
       this.toHit,
       this.damage,
       this.damageType,
+      this.rangedToHit,
+      this.rangedDamage,
+      this.rangedDamageType,
+      this.ammo,
       this.defense,
       this.armor,
       this.resistance,

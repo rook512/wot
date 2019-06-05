@@ -21,6 +21,10 @@ it("creates a new unit without crashing", () => {
     1,
     [damageType],
     1,
+    1,
+    [damageType],
+    1,
+    1,
     0,
     0,
     [unitProperty]

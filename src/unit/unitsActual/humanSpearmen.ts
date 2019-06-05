@@ -1,19 +1,9 @@
 import { human } from "../../races/human/human";
-import { UnitBuilder } from "../UnitBuilder";
 import { piercing } from "../damageType/damageTypesActual/piercing";
+import { SpearmenBuilder } from "../unitTemplate/SpearmenBuilder";
 
-export const humanSpearmen = new UnitBuilder()
+export const humanSpearmen = new SpearmenBuilder()
   .setName("Human Spearmen")
   .setRequires([human])
-  .setCosts({ Production: 30, Magic: 40 })
-  .setUpkeep({ Food: 1 })
-  .setMovement(1)
-  .setCount(6)
-  .setMaxHealth(1)
-  .setToHit(1)
-  .setDamage(1)
-  .setDamageType([piercing])
-  .setDefense(1)
-  .setResistance(1)
-  .setUnitProperty([])
+  .setCosts({ Production: 20 })
   .build();

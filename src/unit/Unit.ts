@@ -16,6 +16,10 @@ export class Unit {
   readonly toHit: number;
   readonly damage: number;
   readonly damageType: Array<DamageType>;
+  readonly rangedToHit: number;
+  readonly rangedDamage: number;
+  readonly rangedDamageType: Array<DamageType>;
+  readonly ammo: number;
   readonly defense: number;
   readonly armor: number;
   readonly resistance: number;
@@ -31,6 +35,10 @@ export class Unit {
     toHit: number,
     damage: number,
     damageType: Array<DamageType>,
+    rangedToHit: number,
+    rangedDamage: number,
+    rangedDamageType: Array<DamageType>,
+    ammo: number,
     defense: number,
     armor: number,
     resistance: number,
@@ -46,6 +54,10 @@ export class Unit {
     this.toHit = toHit;
     this.damage = damage;
     this.damageType = damageType;
+    this.rangedToHit = rangedToHit;
+    this.rangedDamage = rangedDamage;
+    this.rangedDamageType = rangedDamageType;
+    this.ammo = ammo;
     this.defense = defense;
     this.armor = armor;
     this.resistance = resistance;

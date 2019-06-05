@@ -6,14 +6,22 @@ export class OrSpecification<TSituation> implements ISpecification<TSituation> {
     this.original = original;
   }
   isSatisfiedBy(situation: TSituation): boolean {
-      return this.original.some(function (specification) {
-        return specification.isSatisfiedBy(situation)
-      });
-    // let pass = false;
-    // for (const specification of this.original) {
-    //   if (specification.isSatisfiedBy(situation)) pass = true;
-    // }
+    for (const specification of this.original) {
+      if (specification.isSatisfiedBy(situation)) return true;
+    }
 
-    // return pass;
+    return false;
   }
 }
+
+//   isSatisfiedBy(situation: TSituation): boolean {
+//       return this.original.some(function (specification) {
+//         return specification.isSatisfiedBy(situation)
+//       });
+
+// let pass = false;
+// for (const specification of this.original) {
+//   if (specification.isSatisfiedBy(situation)) pass = true;
+// }
+
+// return pass;

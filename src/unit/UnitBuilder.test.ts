@@ -1,6 +1,7 @@
 import { DamageType } from "./damageType/DamageType";
 import { UnitProperty } from "./unitProperty/UnitProperty";
 import { UnitBuilder } from "./UnitBuilder";
+import { Unit } from "./Unit";
 
 const dtype = new DamageType("Damage Type");
 const uprop = new UnitProperty("Unit Property");
@@ -78,6 +79,26 @@ it("allows us to easily set the damage", () => {
 it("allows us to easily set the damage type", () => {
   const actual = new UnitBuilder(true).setDamageType([dtype]).build();
   expect(actual.damageType).toEqual([dtype]);
+});
+
+it("allows us to easily set the ranged to hit", () => {
+  const actual = new UnitBuilder(true).setRangedToHit(1).build();
+  expect(actual.rangedToHit).toEqual(1);
+});
+
+it("allows us to easily set the ranged damage", () => {
+  const actual = new UnitBuilder(true).setRangedDamage(1).build();
+  expect(actual.rangedDamage).toEqual(1);
+});
+
+it("allows us to easily set the ranged damage type", () => {
+  const actual = new UnitBuilder(true).setRangedDamageType([dtype]).build();
+  expect(actual.rangedDamageType).toEqual([dtype]);
+});
+
+it("allows us to easily set the ammo", () => {
+  const actual = new UnitBuilder(true).setAmmo(1).build();
+  expect(actual.ammo).toEqual(1);
 });
 
 it("allows us to easily set the defense", () => {

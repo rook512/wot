@@ -1,5 +1,10 @@
 Make Unit Templates/Units for 3 Unit Types
-Update OR specification to match AND
+Update OR specification to match AND <- DONE
+Add ranged stats to Units <- DONE
+Update unit viewer to conditionally show ranged stats
+
+Write function that takes 2 units and calculates result damage
+
 Make more races
 Make more units
 Make more buildings
