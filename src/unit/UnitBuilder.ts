@@ -41,10 +41,17 @@ export class UnitBuilder {
     this.name = name;
     return this;
   }
-  setRequires(requires: Array<Building | Race>) {
-    this.requires = requires;
+
+  setRequires(addRequires: Array<Building | Race>) {
+    this.requires = this.requires.concat(addRequires);
     return this;
   }
+
+  // setRequires(newRequires: Array<Building | Race>) {
+  //   this.requires = { ...this.requires, ...newRequires };
+  //   return this;
+  // }
+
   setCosts(newCost: Partial<Record<BuildingResource, number>>) {
     this.cost = { ...this.cost, ...newCost };
     return this;
@@ -73,10 +80,17 @@ export class UnitBuilder {
     this.damage = damage;
     return this;
   }
-  setDamageType(damageType: Array<DamageType>) {
-    this.damageType = damageType;
+
+  setDamageType(addDamageType: Array<DamageType>) {
+    this.damageType = this.damageType.concat(addDamageType);
     return this;
   }
+
+  // setDamageType(damageType: Array<DamageType>) {
+  //   this.damageType = damageType;
+  //   return this;
+  // }
+
   setRangedToHit(rangedToHit: number) {
     this.rangedToHit = rangedToHit;
     return this;
@@ -85,10 +99,17 @@ export class UnitBuilder {
     this.rangedDamage = rangedDamage;
     return this;
   }
-  setRangedDamageType(rangedDamageType: Array<DamageType>) {
-    this.rangedDamageType = rangedDamageType;
+
+  setRangedDamageType(addrangedDamageType: Array<DamageType>) {
+    this.rangedDamageType = this.rangedDamageType.concat(addrangedDamageType);
     return this;
   }
+
+  // setRangedDamageType(rangedDamageType: Array<DamageType>) {
+  //   this.rangedDamageType = rangedDamageType;
+  //   return this;
+  // }
+
   setAmmo(ammo: number) {
     this.ammo = ammo;
     return this;
@@ -105,10 +126,16 @@ export class UnitBuilder {
     this.resistance = resistance;
     return this;
   }
-  setUnitProperty(unitProperty: Array<UnitProperty>) {
-    this.unitProperty = unitProperty;
+
+  setUnitProperty(addUnitProperty: Array<UnitProperty>) {
+    this.unitProperty = this.unitProperty.concat(addUnitProperty);
     return this;
   }
+
+  // setUnitProperty(unitProperty: Array<UnitProperty>) {
+  //   this.unitProperty = unitProperty;
+  //   return this;
+  // }
 
   build(): Unit {
     if (!this.wasNameSet) {

@@ -46,3 +46,6 @@ Combat
     Simulate combat between two units
     Stage combat between two units on a map (unit A engages unit B)
 
+Buildings
+    Added smithy with no stats
+    Added hunting lodge with no stats

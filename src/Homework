@@ -2,6 +2,7 @@ Make Unit Templates/Units for 3 Unit Types
 Update OR specification to match AND <- DONE
 Add ranged stats to Units <- DONE
 Update unit viewer to conditionally show ranged stats
+Set Unit Builder/Templates to add to each other <- DONE
 
 Write function that takes 2 units and calculates result damage
 
@@ -9,3 +10,5 @@ Make more races
 Make more units
 Make more buildings
 DESIGN MAGIC
+
+Smithy having no name threw error for SwordmenBuilder.test.ts
