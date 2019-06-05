@@ -1,4 +1,4 @@
-import { spearmen } from "./Spearmen";
+import { spearmen } from "./spearmen";
 import { UnitBuilder } from "../UnitBuilder";
 
 it("creates a spearmen unitbuilder", () => {
