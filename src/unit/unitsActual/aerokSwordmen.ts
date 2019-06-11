@@ -4,7 +4,7 @@ import { flySoar } from "../unitProperty/unitPropertyActual/flySoar";
 
 export const aerokSwordmen = new SwordmenBuilder()
   .setName("Aerok Swordmen")
-  .setRequires([aerok])
+  .addRequires([aerok])
   .setCount(4)
-  .setUnitProperty([flySoar])
+  .addUnitProperty([flySoar])
   .build();

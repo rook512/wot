@@ -4,7 +4,7 @@ import { SpearmenBuilder } from "../unitTemplate/SpearmenBuilder";
 
 export const aerokSpearmen = new SpearmenBuilder()
   .setName("Aerok Spearmen")
-  .setRequires([aerok])
+  .addRequires([aerok])
   .setCount(4)
-  .setUnitProperty([flySoar])
+  .addUnitProperty([flySoar])
   .build();

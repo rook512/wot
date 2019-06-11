@@ -11,7 +11,7 @@ export class SpearmenBuilder extends UnitBuilder {
       .setMaxHealth(1)
       .setToHit(1)
       .setDamage(1)
-      .setDamageType([piercing])
+      .addDamageType([piercing])
       .setDefense(1)
       .setResistance(1);
   }

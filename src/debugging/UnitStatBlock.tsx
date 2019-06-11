@@ -36,16 +36,7 @@ export function UnitStatBlock(props: { unit: Unit }) {
         <dd>{props.unit.damage}</dd>
         <dt>Damage Type:</dt>
         <dd>{props.unit.damageType.map(r => r.name).join(", ")}</dd>
-        <dt>Ranged To Hit:</dt>
-        <dd>{props.unit.rangedToHit}</dd>
-        <dt>Ranged Damage:</dt>
-        <dd>{props.unit.rangedDamage}</dd>
-        <dt>Ranged Damage Type:</dt>
-        <dd>
-          {props.unit.rangedDamageType.map(r => r.name).join(", ") || "<None>"}
-        </dd>
-        <dt>Ammo:</dt>
-        <dd>{props.unit.ammo}</dd>
+        <RangedStatBlock unit={props.unit} />
         <dt>Defense:</dt>
         <dd>{props.unit.defense}</dd>
         <dt>Resistance:</dt>
@@ -57,4 +48,24 @@ export function UnitStatBlock(props: { unit: Unit }) {
       </dl>
     </>
   );
+}
+function RangedStatBlock(props: { unit: Unit }) {
+  if (props.unit.rangedToHit > 0) {
+    return (
+      <>
+        <dt>Ranged To Hit:</dt>
+        <dd>{props.unit.rangedToHit}</dd>
+        <dt>Ranged Damage:</dt>
+        <dd>{props.unit.rangedDamage}</dd>
+        <dt>Ranged Damage Type:</dt>
+        <dd>
+          {props.unit.rangedDamageType.map(r => r.name).join(", ") || "<None>"}
+        </dd>
+        <dt>Ammo:</dt>
+        <dd>{props.unit.ammo}</dd>
+      </>
+    );
+  } else {
+    return null;
+  }
 }

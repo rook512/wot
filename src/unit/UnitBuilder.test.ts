@@ -77,7 +77,7 @@ it("allows us to easily set the damage", () => {
 });
 
 it("allows us to easily set the damage type", () => {
-  const actual = new UnitBuilder(true).setDamageType([dtype]).build();
+  const actual = new UnitBuilder(true).addDamageType([dtype]).build();
   expect(actual.damageType).toEqual([dtype]);
 });
 
@@ -92,7 +92,7 @@ it("allows us to easily set the ranged damage", () => {
 });
 
 it("allows us to easily set the ranged damage type", () => {
-  const actual = new UnitBuilder(true).setRangedDamageType([dtype]).build();
+  const actual = new UnitBuilder(true).addRangedDamageType([dtype]).build();
   expect(actual.rangedDamageType).toEqual([dtype]);
 });
 
@@ -117,6 +117,6 @@ it("allows us to easily set the resistance", () => {
 });
 
 it("allows us to easily set the unit properties", () => {
-  const actual = new UnitBuilder(true).setUnitProperty([uprop]).build();
+  const actual = new UnitBuilder(true).addUnitProperty([uprop]).build();
   expect(actual.unitProperty).toEqual([uprop]);
 });

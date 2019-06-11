@@ -3,7 +3,7 @@ import { SpearmenBuilder } from "../unitTemplate/SpearmenBuilder";
 
 export const elfSpearmen = new SpearmenBuilder()
   .setName("Elven Spearmen")
-  .setRequires([elf])
+  .addRequires([elf])
   .setCount(4)
   .setToHit(2)
   .setDefense(2)

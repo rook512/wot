@@ -8,16 +8,16 @@ export class SwordmenBuilder extends UnitBuilder {
   constructor(isTest = false) {
     super(isTest);
     this.setCosts({ Production: 40 })
-      .setRequires([smithy])
+      .addRequires([smithy])
       .setUpkeep({ Food: 1 })
       .setMovement(2)
       .setCount(6)
       .setMaxHealth(1)
       .setToHit(2)
       .setDamage(2)
-      .setDamageType([piercing, slashing])
+      .addDamageType([piercing, slashing])
       .setDefense(3)
       .setResistance(1)
-      .setUnitProperty([largeShield]);
+      .addUnitProperty([largeShield]);
   }
 }

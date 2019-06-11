@@ -42,13 +42,13 @@ export class UnitBuilder {
     return this;
   }
 
-  setRequires(addRequires: Array<Building | Race>) {
+  addRequires(addRequires: Array<Building | Race>) {
     this.requires = this.requires.concat(addRequires);
     return this;
   }
 
   // setRequires(newRequires: Array<Building | Race>) {
-  //   this.requires = { ...this.requires, ...newRequires };
+  //   this.requires = [ ...this.requires, ...newRequires ];
   //   return this;
   // }
 
@@ -81,7 +81,7 @@ export class UnitBuilder {
     return this;
   }
 
-  setDamageType(addDamageType: Array<DamageType>) {
+  addDamageType(addDamageType: Array<DamageType>) {
     this.damageType = this.damageType.concat(addDamageType);
     return this;
   }
@@ -100,7 +100,7 @@ export class UnitBuilder {
     return this;
   }
 
-  setRangedDamageType(addrangedDamageType: Array<DamageType>) {
+  addRangedDamageType(addrangedDamageType: Array<DamageType>) {
     this.rangedDamageType = this.rangedDamageType.concat(addrangedDamageType);
     return this;
   }
@@ -127,7 +127,7 @@ export class UnitBuilder {
     return this;
   }
 
-  setUnitProperty(addUnitProperty: Array<UnitProperty>) {
+  addUnitProperty(addUnitProperty: Array<UnitProperty>) {
     this.unitProperty = this.unitProperty.concat(addUnitProperty);
     return this;
   }

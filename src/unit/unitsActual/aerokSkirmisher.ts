@@ -4,7 +4,7 @@ import { flySoar } from "../unitProperty/unitPropertyActual/flySoar";
 
 export const aerokSkirmisher = new SkirmisherBuilder()
   .setName("Aerok Skirmishers")
-  .setRequires([aerok])
+  .addRequires([aerok])
   .setCount(4)
-  .setUnitProperty([flySoar])
+  .addUnitProperty([flySoar])
   .build();

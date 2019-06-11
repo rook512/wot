@@ -3,6 +3,6 @@ import { SpearmenBuilder } from "../unitTemplate/SpearmenBuilder";
 
 export const humanSpearmen = new SpearmenBuilder()
   .setName("Human Spearmen")
-  .setRequires([human])
+  .addRequires([human])
   .setCosts({ Production: 20 })
   .build();

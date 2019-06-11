@@ -3,6 +3,6 @@ import { SpearmenBuilder } from "../unitTemplate/SpearmenBuilder";
 
 export const orcSpearmen = new SpearmenBuilder()
   .setName("Orcish Spearmen")
-  .setRequires([orc])
+  .addRequires([orc])
   .setCount(8)
   .build();

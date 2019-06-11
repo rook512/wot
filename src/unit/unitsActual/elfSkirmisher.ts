@@ -3,7 +3,7 @@ import { elf } from "../../races/elf/elf";
 
 export const elfSkirmisher = new SkirmisherBuilder()
   .setName("Elven Skirmishers")
-  .setRequires([elf])
+  .addRequires([elf])
   .setCount(4)
   .setToHit(2)
   .setDamage(1)
