@@ -17,9 +17,9 @@ import { Unit } from "../unit/Unit";
 
 function flipCoin(chanceOf1: number) {
   if (Math.random() > chanceOf1) {
-    return 1;
-  } else {
     return 0;
+  } else {
+    return 1;
   }
 }
 
@@ -39,17 +39,12 @@ export function combat(attacker: Unit, defender: Unit) {
 }
 
 export function calculateDefenseDifferential(attacker: Unit, defender: Unit) {
-  let defenseDifferential = 0;
-  let attackerTotal = attacker.count * attacker.toHit;
-  let defenderTotal = defender.count * defender.defense;
-  if (attacker.toHit > defender.defense) {
-    defenseDifferential = 0.5 + (attackerTotal - defenderTotal) * 0.1;
-  } else if (attacker.toHit < defender.defense) {
-    defenseDifferential = 0.5 + (attackerTotal - defenderTotal) * 0.1;
-  } else {
-    defenseDifferential = 0.5;
-  }
-  defenseDifferential = clamp(defenseDifferential, 0.3, 0.9);
+  const attackerTotal = attacker.count * attacker.toHit;
+  const defenderTotal = defender.count * defender.defense;
+  const advantageRatio = attackerTotal >= defenderTotal ? 0.1 : 0.1;
+  let defenseDifferential =
+    0.3 + (attackerTotal - defenderTotal) * advantageRatio;
+  defenseDifferential = clamp(defenseDifferential, 0.1, 0.9);
   return defenseDifferential;
 }
 

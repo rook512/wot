@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`calculates elf spearmen vs human spearmen differential 1`] = `0.7`;
+exports[`calculates Elven Spearmen vs Orcish Spearmen differential 1`] = `0.3`;
 
-exports[`calculates human spearmen vs elf spearmen differential 1`] = `0.3`;
+exports[`calculates elf spearmen vs human spearmen differential 1`] = `0.5`;
 
-exports[`calculates human spearmen vs human spearmen differential 1`] = `0.5`;
+exports[`calculates human spearmen vs elf spearmen differential 1`] = `0.1`;
+
+exports[`calculates human spearmen vs human spearmen differential 1`] = `0.3`;
+
+exports[`calculates human spearmen vs orc spearmen differential 1`] = `0.1`;
+
+exports[`calculates orc spearmen vs elf spearmen differential 1`] = `0.3`;
+
+exports[`calculates orc spearmen vs human spearmen differential 1`] = `0.5`;

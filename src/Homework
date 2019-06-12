@@ -5,6 +5,8 @@ Update unit viewer to conditionally show ranged stats <- DONE
 Set Unit Builder/Templates to add to each other <- DONE
 
 Change Unit builder to filter array
+Add function for combat snapshot test
+Add ranged combat
 
 Write function that takes 2 units and calculates result damage
 
